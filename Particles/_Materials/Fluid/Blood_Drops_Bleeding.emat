@@ -1,0 +1,10 @@
+Particle {
+ Color 0.093 0 0 1
+ AlbedoMap "{82EAAE51746ABD43}Particles/_Textures/Dust_noise_gray_02_BCA.edds"
+ Diffuse 0.22 0 0 1
+ Ambient 0.026 0.004 0.004 1
+ ReceiveShadow 1
+ ReceiveProbesLighting 1
+ ReceiveLights 1
+ Softness 2
+}

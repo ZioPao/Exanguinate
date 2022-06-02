@@ -1,0 +1,32 @@
+EffectDef {
+ Emitters {
+  EmitterDef squirt {
+   ConeAngle 0 0 0
+   MaxNum 250
+   BirthRate 1
+   BirthRateRND 328.3
+   BirthRateVel 4.2
+   Material "{78ACC66A04289058}Particles/_Materials/Fluid/Blood_Drops_Bleeding.emat"
+   Prefab "{29FBEC1991810EEF}system/wbdata/ParticleEditor/defaultPrefab.et"
+   SizeMultiplier 0.02
+   SizeRND 0.01
+   ScaleX 1
+   ScaleY 1
+   RotMultiplier_3D 0 0 0
+   RotRND_3D 0 0 0
+   RandomUFlip 1
+   Velocity 5
+   VelocityRND 0.2
+   AirResistance 8.824
+   AirResistanceRND 4.824
+   ParentVelRelToAir 0.035
+   GravityMultiply 4.706
+   GravityMultiplyRND 2.353
+   Restitution 0.1
+   Spring 0.2
+   Lifetime 10
+   EmittingTime 0.601
+   Repeat 0
+  }
+ }
+}

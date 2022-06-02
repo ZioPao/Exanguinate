@@ -1,0 +1,16 @@
+Particle {
+ Color 0.03 0.03 0.03 1
+ AlbedoMap "{27322997F638D102}Particles/_Textures/Blood_squirt_anim_05_BCA.edds"
+ ReceiveShadow 1
+ ReceiveProbesLighting 1
+ ReceiveLights 1
+ AlphaTest 0
+ AlphaMul 5
+ TileU 74
+ TileV 19
+ SphereSizeMultiplier 1
+ NormalMapPower 0.579
+ NormalStretching 0
+ Softness 2
+ CameraBlendFar 0.001
+}

@@ -1,0 +1,8 @@
+GameProject {
+ ID "Exanguinate"
+ GUID "597CFDF094D52251"
+ TITLE "Exanguinate"
+ Dependencies {
+  "58D0FB3206B6F859"
+ }
+}
