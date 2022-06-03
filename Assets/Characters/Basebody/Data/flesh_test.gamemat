@@ -1,0 +1,23 @@
+GameMaterial {
+ "Physics material" "{579AA3522575CB8F}Common/Materials/Physics/flesh.physmat"
+ SoundInfo SoundInfo "{59867276117266BB}" {
+  SurfaceSignalValue 9000
+ }
+ HitEffectInfo HitEffectInfo "{598672760EB8FDC8}" {
+  ParticleEffect "{A3C8D7F4ADD0CA16}Particles/Enviroment/Hit_flesh_enter_01.ptc"
+  DecalMaterials {
+   "{1D40B1366457EA07}Assets/Decals/Character/Impact/Data/DecalFlesh.emat"
+  }
+ }
+ CollisionInfo CollisionInfo "{598672763B6C22D4}" {
+  ParticleEffect "{A3C8D7F4ADD0CA16}Particles/Enviroment/Hit_flesh_enter_01.ptc"
+ }
+ BallisticInfo BallisticInfo "{5986727630657E0B}" {
+  PenetrationDirCombine Min
+ }
+ ParticleEffectInfo ParticleEffectInfo "{5986727633C2BFB0}" {
+  VehicleDust {
+   "{9ADCD3EA0314A5FA}Particles/Vehicle/Vehicle_dust_medium_wheel_default.ptc"
+  }
+ }
+}

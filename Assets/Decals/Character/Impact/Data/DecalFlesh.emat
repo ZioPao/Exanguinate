@@ -1,0 +1,11 @@
+MatPBRDecal {
+ SpecularMul 0.793
+ AlphaTest 0
+ AlphaMul 1.141
+ MetalnessScale 0.368
+ NormalPower 1.588
+ HeightMap "{62FF7C7DA9BBC4B4}Assets/Decals/Character/Impact/Data/Blood Decals HM.edds"
+ ParallaxScale 0.166
+ ParallaxMidlePlane 0.441
+ ParallaxShadowScale 0.857
+}

@@ -6,9 +6,10 @@ EffectDef {
    BirthRate 1
    BirthRateRND 328.3
    BirthRateVel 4.2
+   Offset 0 0 0
    Material "{78ACC66A04289058}Particles/_Materials/Fluid/Blood_Drops_Bleeding.emat"
    Prefab "{29FBEC1991810EEF}system/wbdata/ParticleEditor/defaultPrefab.et"
-   SizeMultiplier 0.02
+   SizeMultiplier 0.05
    SizeRND 0.01
    ScaleX 1
    ScaleY 1
@@ -22,10 +23,10 @@ EffectDef {
    ParentVelRelToAir 0.035
    GravityMultiply 4.706
    GravityMultiplyRND 2.353
-   Restitution 0.1
-   Spring 0.2
+   Restitution 0.01
+   Spring 0
    Lifetime 10
-   EmittingTime 0.601
+   EmittingTime 1
    Repeat 0
   }
  }

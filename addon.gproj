@@ -3,6 +3,18 @@ GameProject {
  GUID "597CFDF094D52251"
  TITLE "Exanguinate"
  Dependencies {
-  "58D0FB3206B6F859"
+  "58D0FB3206B6F859" "59664C0CB36501CD" "59651354B2904BA6"
+ }
+ Configurations {
+  GameProjectConfig PC {
+  }
+  GameProjectConfig XBOX_ONE {
+  }
+  GameProjectConfig XBOX_SERIES {
+  }
+  GameProjectConfig PS4 {
+  }
+  GameProjectConfig HEADLESS {
+  }
  }
 }

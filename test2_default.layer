@@ -1,0 +1,62 @@
+$grp SCR_ChimeraCharacter : "{2619482C6C4202E0}Prefabs/Characters/Campaign/Final/Campaign_US_AI.et" {
+ {
+  coords 18.35 1.001 14.303
+ }
+ {
+  coords 29.26 1.001 50.156
+ }
+ {
+  coords 26.784 1.001 58.554
+ }
+ {
+  coords 17.32 1.001 51.053
+ }
+ {
+  coords 13.815 1.001 43.807
+ }
+ {
+  coords 11.514 1.001 27.038
+ }
+ {
+  coords 15.871 1.001 21.027
+ }
+ {
+  coords 17.22 1.001 17.059
+ }
+ {
+  coords 15.763 1.001 16.308
+ }
+ {
+  coords 10.206 1.001 18.561
+ }
+ {
+  coords 9.176 1.001 18.217
+ }
+ {
+  coords 9.954 1.001 16.256
+ }
+ {
+  coords 23.732 1.001 27.125
+ }
+ {
+  coords 27.083 1.001 31.784
+ }
+ {
+  coords 25.446 1.001 33.629
+ }
+ {
+  coords 16.41 1.001 18.499
+ }
+ {
+  coords 16.964 1.001 16.064
+ }
+ {
+  coords 2.448 13.861 -14.263
+ }
+ {
+  coords 12.652 1.001 12.748
+ }
+}
+SCR_ChimeraCharacter : "{4BD25C24797313B6}Prefabs/Characters/Core/Character_Base_Immortal.et" {
+ coords 16.204 1.001 13.091
+}
