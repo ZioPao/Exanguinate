@@ -9,31 +9,20 @@ modded class SCR_CharacterDamageManagerComponent : ScriptedDamageManagerComponen
 	
 
 	bool enableEffects;
-	bool enableBloodlustCompatibility;
+	const string fileNameJson = "EXA_Settings.json";
+	const string MOD_ID = "597CFDF094D52251";				//it's probably possible to get this in a better way but ok
+
 	
+	ref map<string, string> settings;
+	
+
 	override void OnInit(IEntity owner)
 	{
+		super.OnInit(owner);
+		
 		enableEffects = true;
-		enableBloodlustCompatibility = true;
-		
-		
-		
-		if (enableBloodlustCompatibility)
-			InitBloodlust(owner);
 		
 
-		/* Settings initialization stuff 
-		MCF_SettingsManager mcfSettingsManager = MCF_SettingsManager.GetInstance();
-		
-		const string fileNameJson = "EXA_Settings.json";
-		const string MOD_ID = "597CFDF094D52251";				//it's probably possible to get this in a better way but ok
-		map<string, string> mapDefaultValues = new map<string, string>();
-		mapDefaultValues.Insert("enableEffects", "true");
-		array<string> userFriendlyNames = {"Enable Effects"};
-
-		map<string, string> settings = mcfSettingsManager.Setup(MOD_ID, fileNameJson, mapDefaultValues, userFriendlyNames);
-		enableEffects = settings.Get("enableEffects").ToInt();
-*/
 	}
 	
 	
@@ -56,6 +45,35 @@ modded class SCR_CharacterDamageManagerComponent : ScriptedDamageManagerComponen
 	//! Called to start bleeding effect on a specificied bone
 	override void CreateBleedingParticleEffect(notnull HitZone hitZone, float bleedingRate, int colliderDescriptorIndex)
 	{
+		
+		
+		// THIS DOESN'T NEED THE SUPER SINCE WE'RE REPLACING IT ENTIRELY!!!
+		
+		//Settings initialization stuff 
+		MCF_SettingsManager mcfSettingsManager = MCF_SettingsManager.GetInstance();
+		
+		
+		
+		//check if already present 
+		if (!mcfSettingsManager.GetJsonManager(MOD_ID))
+		{
+			map<string, string> mapDefaultValues = new map<string, string>();
+			mapDefaultValues.Insert("enableEffects", "1");
+			array<string> userFriendlyNames = {"Enable Effects"};
+			settings = mcfSettingsManager.Setup(MOD_ID, fileNameJson, mapDefaultValues, userFriendlyNames);
+		
+		}
+		else if (!settings)
+		{
+			settings = mcfSettingsManager.GetModSettings(MOD_ID);
+			
+		}
+		
+		enableEffects = settings.Get("enableEffects").ToInt();
+
+
+		
+		
 		
 		if (enableEffects)
 		{

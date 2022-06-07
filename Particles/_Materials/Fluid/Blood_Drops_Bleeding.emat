@@ -6,5 +6,6 @@ Particle {
  ReceiveShadow 1
  ReceiveProbesLighting 1
  ReceiveLights 1
+ AlphaTest 21
  Softness 2
 }

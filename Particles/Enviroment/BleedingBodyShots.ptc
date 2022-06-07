@@ -2,23 +2,25 @@ EffectDef {
  Emitters {
   EmitterDef squirt {
    ConeAngle 0 0 0
-   MaxNum 250
-   BirthRate 1
-   BirthRateRND 328.3
-   BirthRateVel 4.2
+   Occlusion 5.882
+   MaxNum 300
+   BirthRate 500
+   BirthRateRND 320
+   BirthRateVel 400
    Offset 0 0 0
    Material "{78ACC66A04289058}Particles/_Materials/Fluid/Blood_Drops_Bleeding.emat"
    Prefab "{29FBEC1991810EEF}system/wbdata/ParticleEditor/defaultPrefab.et"
-   SizeMultiplier 0.05
+   SizeMultiplier 0.055
    SizeRND 0.01
    ScaleX 1
    ScaleY 1
    RotMultiplier_3D 0 0 0
    RotRND_3D 0 0 0
+   VelAngle 1
    RandomUFlip 1
-   Velocity 5
+   Velocity 10
    VelocityRND 0.2
-   AirResistance 8.824
+   AirResistance 8.942
    AirResistanceRND 4.824
    ParentVelRelToAir 0.035
    GravityMultiply 4.706
