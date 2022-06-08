@@ -9,11 +9,9 @@ modded class SCR_CharacterDamageManagerComponent : ScriptedDamageManagerComponen
 	
 
 	bool enableEffects;
-	const string fileNameJson = "EXA_Settings.json";
-	const string MOD_ID = "597CFDF094D52251";				//it's probably possible to get this in a better way but ok
 
 	
-	ref map<string, string> settings;
+	ref map<string, string> exaSettings;
 	
 
 	override void OnInit(IEntity owner)
@@ -42,36 +40,40 @@ modded class SCR_CharacterDamageManagerComponent : ScriptedDamageManagerComponen
 	
 
 //-----------------------------------------------------------------------------------------------------------
-	//! Called to start bleeding effect on a specificied bone
+	//! Called to start bleeding effect on a specificied bone 		
+	// THIS DOESN'T NEED THE SUPER SINCE WE'RE REPLACING IT ENTIRELY!!!
 	override void CreateBleedingParticleEffect(notnull HitZone hitZone, float bleedingRate, int colliderDescriptorIndex)
 	{
 		
 		
-		// THIS DOESN'T NEED THE SUPER SINCE WE'RE REPLACING IT ENTIRELY!!!
-		
+		/////////////////////////////////////////////////////////////////////////////////////////////////
 		//Settings initialization stuff 
-		MCF_SettingsManager mcfSettingsManager = MCF_SettingsManager.GetInstance();
+		MCF_SettingsManager EXA_mcfSettingsManager = MCF_SettingsManager.GetInstance();
+		const string EXA_FileNameJson = "EXA_Settings.json";
+		const string EXA_MOD_ID = "597CFDF094D52251";				//it's probably possible to get this in a better way but ok
+		map<string, ref VariableInfo> exaVariableMap = new map<string, ref VariableInfo>();
+		
+		exaVariableMap.Set("enableEffects", new VariableInfo("Enable Effects", "1"));
 		
 		
-		
-		//check if already present 
-		if (!mcfSettingsManager.GetJsonManager(MOD_ID))
+		// still janky
+		if (!EXA_mcfSettingsManager.GetJsonManager(EXA_MOD_ID))
 		{
-			map<string, string> mapDefaultValues = new map<string, string>();
-			mapDefaultValues.Insert("enableEffects", "1");
-			array<string> userFriendlyNames = {"Enable Effects"};
-			settings = mcfSettingsManager.Setup(MOD_ID, fileNameJson, mapDefaultValues, userFriendlyNames);
+			Print("EXA: Preparing MCF");
+			exaSettings = EXA_mcfSettingsManager.Setup(EXA_MOD_ID, EXA_FileNameJson, exaVariableMap);
 		
 		}
-		else if (!settings)
+		else if (!exaSettings)
 		{
-			settings = mcfSettingsManager.GetModSettings(MOD_ID);
+			Print("EXA: Loading Settings");
+
+			exaSettings = EXA_mcfSettingsManager.GetModSettings(EXA_MOD_ID);
 			
 		}
 		
-		enableEffects = settings.Get("enableEffects").ToInt();
+		enableEffects = exaSettings.Get("enableEffects").ToInt();
 
-
+		//////////////////////////////////////////////////////////////////////////////////////////////////
 		
 		
 		
